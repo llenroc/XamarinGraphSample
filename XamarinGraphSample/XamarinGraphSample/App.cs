@@ -2,29 +2,27 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Microsoft.Identity.Client;
 using Xamarin.Forms;
+using XamarinGraphSample.Views;
 
 namespace XamarinGraphSample
 {
     public class App : Application
     {
+        public static PublicClientApplication IdentityClientApp = null;
+        public static string ClientID = "3b1def2e-5b4e-413d-9a96-b8d8e9776029";
+        public static string[] Scopes = {
+                        "https://graph.microsoft.com/Calendars.Read",
+                        "https://graph.microsoft.com/Contacts.Read",
+                        "https://graph.microsoft.com/User.Read"
+
+
+                    };
         public App()
         {
-            // The root page of your application
-            MainPage = new ContentPage
-            {
-                Content = new StackLayout
-                {
-                    VerticalOptions = LayoutOptions.Center,
-                    Children = {
-                         new Label {
-                             HorizontalTextAlignment = TextAlignment.Center,
-                             Text = "Welcome to Xamarin Forms!"
-                         }
-                     }
-                }
-            };
+            IdentityClientApp = new PublicClientApplication(ClientID);
+            MainPage = new HomePage();
         }
 
         protected override void OnStart()

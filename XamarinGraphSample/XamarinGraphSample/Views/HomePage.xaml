@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinGraphSample.Views.HomePage">
+    <ScrollView Margin="0,25,0,0" Padding="20">
+        <Grid RowSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Frame BackgroundColor="Yellow" Grid.Row="0">
+                <Label Text="Who am I?" TextColor="Red" FontSize="Large"/>
+            </Frame>
+            
+            <Label x:Name="UserName" Grid.Row="1"/>
+            <Label x:Name="UserRole" Grid.Row="2"/>
+            <Label x:Name="UserOffice" Grid.Row="3"/>
+
+            <Frame BackgroundColor="Yellow" Grid.Row="4">
+                <Label Text="Next Event:" TextColor="Red" FontSize="Large"/>
+            </Frame>
+            
+            <Label x:Name="EventsTitle" Grid.Row="5"/>
+            <Label x:Name="EventDate" Grid.Row="6"/>
+
+            <Frame BackgroundColor="Yellow" Grid.Row="7">
+                <Label Text="First Available Contact:" TextColor="Red" FontSize="Large"/>
+            </Frame>
+
+            <Label x:Name="ContactName" Grid.Row="8"/>
+            <Label x:Name="ContactEmail" Grid.Row="9"/>
+        </Grid>
+     
+    </ScrollView>
+    
+</ContentPage>
